@@ -40,6 +40,22 @@ public class AlertPractice {
         String expected = "You successfully clicked an alert";
         Assert.assertEquals(result.getText(),expected,"Failed");
     }
+    @Test
+    public void alertPractice2(){
+//        1. Open browser
+//        2. Go to website: http://practice.cydeo.com/javascript_alerts
+//        3. Click to “Click for JS Prompt” button
+        WebElement clickOnJsPrompt = driver.findElement(By.xpath("//button[@onclick='jsPrompt()']"));
+        clickOnJsPrompt.click();
+        Alert alert = driver.switchTo().alert();
+        alert.sendKeys("hello");
+        alert.accept();
+        String actualResult = driver.findElement(By.xpath("//p[@id='result']")).getText();
+        Assert.assertEquals(actualResult,"You entered: hello","Failed");
+//        4. Send “hello” text to alert
+//        5. Click to OK button from the alert
+//        6. Verify “You entered:  hello” text is displayed.
+    }
     @AfterMethod
     public void tearDown(){
         driver.quit();
