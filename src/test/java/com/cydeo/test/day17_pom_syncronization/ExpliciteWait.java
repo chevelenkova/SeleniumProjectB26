@@ -20,5 +20,6 @@ public class ExpliciteWait {
         Assert.assertEquals(explicitWait.doneMsg.getText(),"Done!");
         Assert.assertTrue(explicitWait.image.isDisplayed());
         //tru
+
     }
 }
