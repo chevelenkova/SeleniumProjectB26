@@ -19,5 +19,6 @@ public class ExpliciteWait {
         wait.until(ExpectedConditions.titleIs("Dynamic title"));
         Assert.assertEquals(explicitWait.doneMsg.getText(),"Done!");
         Assert.assertTrue(explicitWait.image.isDisplayed());
+        //tru
     }
 }
